@@ -1,0 +1,172 @@
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.png') no-repeat center center/cover;
+    background-attachment: fixed; /* <-- keeps background static */
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh; /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+.photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.name {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #4a2a2a;
+    letter-spacing: 1px;
+}
+
+.about-text {
+    margin-top: 15px;
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #5a3a3a;
+    background: rgba(230, 186, 186, 0.65);
+    padding: 15px 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Bottom Menu */
+.menu {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;           /* start at horizontal center */
+    transform: translateX(-50%); /* shift back by half width */
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 12px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 100;        /* ensure it’s above other content */
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4a2a2a;
+    font-weight: bold;
+}
+
+/* CV Section */
+#cv {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* only bottom margin */
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    color: #cb6b6b;
+    text-align: left;
+}
+
+#cv h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cv-block {
+    margin-bottom: 25px;
+}
+
+.cv-block h3 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4a2a2a;
+    display: inline-block;
+}
+
+.cv-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-block li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #4a2a2a;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #6b3f3f;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .grid { grid-template-columns: 1fr; }
+    aside .card { position: static; }
+    .two-col { grid-template-columns: 1fr; }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    color: #4a2a2a;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 25px;
+}
+
+.contact-section p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.contact-icons .icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.contact-icons .icon:hover {
+    transform: scale(1.2);
+}
+
